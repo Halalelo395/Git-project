@@ -29,7 +29,7 @@ def user_register(user:UserRegister, db: Session = Depends(get_db)):
     return{"message:","new user created"}
 
 @app.get("/users", response_model=list[UserOut])
-def get_users(db: Session = Depends(get_db)):
+def get_users(db: Session = Depends(get_current_user)):
     users = db.query(Users).all()
     return users
 
@@ -49,7 +49,7 @@ def login(log: Login, db: Session = Depends(get_db)):
    return {"access token": access_token, "token type": "bearer"}
 
 @app.delete("/delete/{user_id}")
-def delete_user(user_id: int, db:Session = Depends(get_db)):
+def delete_user(user_id: int, db:Session = Depends(get_current_user)):
     user = db.query(Users).filter(Users.id==user_id).first()
     if user is None:
         raise HTTPException(status_code=404, detail="user is dosent exist")
