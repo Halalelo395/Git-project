@@ -3,7 +3,7 @@ uvicorn[standard]
 python-dotenv
 sqlalchemy
 pydantic
-pydantic-setting
+pydantic-settings
 python-jose[cryptography]
 passlib[bcrypt]
 psycopg2-binary
