@@ -3,7 +3,7 @@
 A production-ready authentication API built with FastAPI and PostgreSQL. Live and deployed.
 
 **Live API:** https://git-project-fast-api-app--halaleloevershi.replit.app
-**Interactive Docs:** https://git-project-fast-api-app--halaleloevershi.replit.app/docs
+
 
 ### Features
 - Register users with validation
