@@ -1,33 +1,32 @@
-FastAPI Auth API
+# FastAPI Auth API
 
-A small authentication API I built using FastAPI and PostgreSQL.
+A production-ready authentication API built with FastAPI and PostgreSQL. Live and deployed.
 
-It has user registration, password hashing, JWT login, protected routes, and user deletion.
+**Live API:** https://git-project-fast-api-app--halaleloevershi.replit.app
+**Interactive Docs:** https://git-project-fast-api-app--halaleloevershi.replit.app/docs
 
-API Docs: https://git-project-fast-api-app--halaleloevershi.replit.app/api/docs
-
-Features
-
-- Register users
-- Store users in PostgreSQL
-- Hash passwords with bcrypt
-- Login with JWT
+### Features
+- Register users with validation
+- PostgreSQL storage
+- Bcrypt password hashing
+- JWT login & authentication
 - Protected routes
-- Get users
-- Get user by ID
-- Delete users
+- Get all users / Get user by ID / Delete user
 
-Tech
+### Tech Stack
+- Python, FastAPI, Uvicorn
+- PostgreSQL, SQLAlchemy
+- JWT, Passlib [bcrypt]
+- Deployed on Replit
 
-- Python
-- FastAPI
-- PostgreSQL
-- JWT
-- Passlib / bcrypt
-- Uvicorn
-- Replit
+### Endpoints
+- `POST /register` - Create account
+- `POST /login` - Get access token
+- `GET /users` - Protected
+- `GET /user/{id}` - Protected
+- `DELETE /delete/{id}` - Protected
 
-Run locally
-
+### Run Locally
+```bash
 pip install -r requirements.txt
 uvicorn main:app --reload
